@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <h1 align=center>Список дорам</h1>
+  <div style="padding: 5%">
+    <ol>
+      {% for one_drama in dramas %}
+        <li>
+          <b>{{ one_drama.0 }}</b>
+          <ul>
+            <li>Статус: "{{ one_drama.1 }}"</li>
+            <li><a href="{{ one_drama.4 }}"}>{{ one_drama.4 }}</a></li>
+            <li>{{ one_drama.6 }}</li>
+          </ul>
+        </li>
+        <br>
+      {% endfor %}
+    </ol>
+  </div>
+
+</body>
+</html>
